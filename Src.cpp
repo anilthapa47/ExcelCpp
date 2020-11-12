@@ -17,6 +17,11 @@ public:
 		return cout_ += 1;
 	}
 };
+
+int Return()
+{
+	return 5;
+}
 int RandomFun()
 {
 	int result = rand() % 10;
