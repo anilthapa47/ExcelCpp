@@ -48,7 +48,7 @@ int main()
         i++;
         ch =fgetc(fp);
     }
-    printf("%d",i);
+    printf("Total char count is : %d\n",i);
     printf("File is made");	 
     fclose(fp);
     return 0;
