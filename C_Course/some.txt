@@ -1,5 +1,2 @@
 some more ABCF
 This is the sample project for pull request and merge 
-#############
-Some text here 
-#########
