@@ -48,7 +48,7 @@ int main()
         i++;
         ch =fgetc(fp);
     }
-    printf("%d",i);
+    printf"Something needs to break and count : %d\n",i);
     printf("File is made");	 
     fclose(fp);
     return 0;
