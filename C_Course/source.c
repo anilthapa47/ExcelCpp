@@ -4,7 +4,8 @@ int main()
 {
  
     FILE *fp;   /* file pointer*/
-    char fName[20];
+    int i;
+    char fName[20],ch,character[20];
  
     printf("\nEnter file name to create :");
     scanf("%s",fName);
@@ -36,10 +37,18 @@ int main()
     }
  
     printf("Contents of file is :\n");
+    while( ch =fgetc(fp)!=EOF)
+{
+	i=0;
+	
+	character[i] = (char)ch;
+	printf("%c", character[i]);	
+i++;
+}
     printf("%c",getc(fp));
     printf("%c",getc(fp));
     printf("%c",getc(fp));
- 
+    printf("File is made");	 
     fclose(fp);
     return 0;
 }
