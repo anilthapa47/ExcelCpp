@@ -45,7 +45,7 @@ int main()
 	printf("%c", character[i]);	
 i++;
 }
-    printf("%c",getc(fp));
+    printf("%d",i);
     printf("%c",getc(fp));
     printf("%c",getc(fp));
     printf("File is made");	 
