@@ -4,7 +4,7 @@ int main()
 {
  
     FILE *fp;   /* file pointer*/
-    int i;
+    int i=0;
     //fName = "some.txt";
     char fName[20],ch,character[20];
  
@@ -42,13 +42,13 @@ int main()
     ch =fgetc(fp);
     while( ch !=EOF)
     {
-	    i=0;
+	   
 	    character[i] = (char)ch;
 	    printf("%c\n", character[i]);	
         i++;
         ch =fgetc(fp);
     }
-    printf("Total char count is : %d\n",i);
+    printf("Something needs to break and count : %d\n",i);
     printf("File is made");	 
     fclose(fp);
     return 0;
