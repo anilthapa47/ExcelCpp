@@ -5,13 +5,14 @@ int main()
  
     FILE *fp;   /* file pointer*/
     int i;
+    //fName = "some.txt";
     char fName[20],ch,character[20];
  
-    printf("\nEnter file name to create :");
-    scanf("%s",fName);
+   // printf("\nEnter file name to create :");
+    //scanf("%s",fName);
  
     /*creating (open) a file*/
-    fp=fopen(fName,"w");
+    fp=fopen("some.txt","w");
     /*check file created or not*/
     if(fp==NULL)
     {
@@ -24,12 +25,13 @@ int main()
     putc('A',fp);
     putc('B',fp);
     putc('C',fp);
+    putc('F',fp);
  
     printf("\nData written successfully.");
     fclose(fp);
  
     /*again open file to read data*/
-    fp=fopen(fName,"r");
+    fp=fopen("some.txt","r");
     if(fp==NULL)
     {
         printf("\nCan't open file!!!");
@@ -37,17 +39,16 @@ int main()
     }
  
     printf("Contents of file is :\n");
-    while( ch =fgetc(fp)!=EOF)
-{
-	i=0;
-	
-	character[i] = (char)ch;
-	printf("%c", character[i]);	
-i++;
-}
+    ch =fgetc(fp);
+    while( ch !=EOF)
+    {
+	    i=0;
+	    character[i] = (char)ch;
+	    printf("%c\n", character[i]);	
+        i++;
+        ch =fgetc(fp);
+    }
     printf("%d",i);
-    printf("%c",getc(fp));
-    printf("%c",getc(fp));
     printf("File is made");	 
     fclose(fp);
     return 0;
